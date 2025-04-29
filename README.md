@@ -7,44 +7,26 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 1. Install dependencies
 
    ```bash
-   npm install
+   yarn install
    ```
 
-2. Start the app
+2. Update sentry config in the `app.json` with your config
+
+3. Start the app
 
    ```bash
-    npx expo start
+    npx expo prebuild --clean
    ```
+4. Open `_layout.tsx` file and replace dsn field with a valid sentry dsn.
+5. At this point you should be able to see the stutter. But if you update `replaysSessionSampleRate` to `0` the stutter goes away.
 
-In the output, you'll find options to open the app in a
+Here is what it should look like. Although it might not be noticeable in the video recording. If you run the app, the difference would be more noticeable. Also the more animation stutters way more if it has a more complex logic e.g. [the one I shared the other day](https://github.com/getsentry/sentry-cocoa/issues/4000#issuecomment-2833322907)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+https://github.com/user-attachments/assets/39318fd1-bbc6-4082-9977-e28cd5e57398
 
-## Get a fresh project
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+https://github.com/user-attachments/assets/68956921-70ed-497b-a867-c8c11548f85f
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
