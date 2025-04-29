@@ -36,3 +36,15 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# Yarn Berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+ios/
+android/
